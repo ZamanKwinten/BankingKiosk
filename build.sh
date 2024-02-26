@@ -12,8 +12,10 @@ cd $rootDir/javascript/bank.client
 npm run build
 cd $rootDir
 
-mkdir target
-mv $rootDir/java/bank.web/target/*jar-with-dependencies.jar target/server.jar
+mkdir $rootDir/target
+mkdir $rootDir/target/server
+mv $rootDir/java/bank.web/target/*.jar target/server
+mv $rootDir/java/bank.web/target/lib/*.jar target/server
 mv $rootDir/javascript/bank.client/build target/static
 
 cp $rootDir/launch.sh $rootDir/target/launch.sh
